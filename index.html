@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Sistema escolar</title>
+</head>
+
+<body>
+
+    <div class="menu">
+      <span onclick="navegar('alunos')">Alunos</span>
+
+      <span onclick="navegar('professores')">Professores</span>
+
+      <span onclick="navegar('funcionarios')">Funcionarios</span>
+
+    </div>
+
+    <!-- alunos --> 
+
+    <div id="alunos" class="pagina paginaAtiva">
+
+         <div class="titulo">
+
+        <h1>Cadastro de Alunos</h1>
+
+        <p>Preencha o formulario abaixo para cadastrar um novo aluno:</p>
+
+    </div>
+        <form>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome">
+
+            <label for="datanasc">Data de Nascimento:</label>
+            <input type="date" id="dataNasc" name="datanasc">
+
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email">
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf">
+
+            <button class="cadastrar" type="button" onclick="mostrarDados()">Cadastrar</button>
+        </form>
+    </div>
+
+    
+</div>
+
+<div id="alunos" class="pagina paginaAtiva">
+    
+    <div class="titulo">
+        
+        <h1>Cadastro de Professores</h1>
+        
+        <p>Preencha o formulario abaixo para cadastrar um novo professor:</p>
+        
+    </div>
+        <form>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome">
+            
+            <label for="datanasc">Data de Nascimento:</label>
+            <input type="date" id="dataNasc" name="datanasc">
+            
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email">
+            
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf">
+            
+            <button class="cadastrar" type="button" onclick="mostrarDados()">Cadastrar</button>
+        </form>
+    </div>
+
+    <div id="alunos" class="pagina paginaAtiva">
+        
+        <div class="titulo">
+            
+            <h1>Cadastro de Funcionários</h1>
+            
+            <p>Preencha o formulario abaixo para cadastrar um novo funcionário:</p>
+            
+        </div>
+        <form>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome">
+            
+            <label for="datanasc">Data de Nascimento:</label>
+            <input type="date" id="dataNasc" name="datanasc">
+            
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email">
+            
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf">
+            
+            <button class="cadastrar" type="button" onclick="mostrarDados()">Cadastrar</button>
+        </form>
+    </div>
+
+    <div id="resultado" class="resultado">
+    
+</body>
+<script>
+    function mostrarDados (){
+
+       let nome = document.getElementById("nome").value;
+       let dataNasc = document.getElementById("dataNasc").value;
+       let email = document.getElementById("email").value;
+       let cpf = document.getElementById("cpf").value;
+       let resultado = document.getElementById("resultado");
+
+       document.getElementById("resultado").innerHTML="<h2>Dados informados</h2>"+
+       "Nome: " + nome + "<br>" +
+       "Data de Nascimento: " + dataNasc + "<br>" +
+       "CPF: " + cpf + "<br>" +
+       "Email: " + email;
+
+       resultado.style.display = "block"
+    }
+</script>
+
+</html>
