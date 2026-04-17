@@ -11,13 +11,11 @@
 <body>
 
     <div class="menu">
-      <span onclick="navegar('alunos')">Alunos</span>
-
-      <span onclick="navegar('professores')">Professores</span>
-
-      <span onclick="navegar('funcionarios')">Funcionarios</span>
-
-    </div>
+          <span onclick="navegar('dashboard')">Inicio</span>
+          <span onclick="navegar('alunos')">Alunos</span>
+          <span onclick="navegar('professores')">Professores</span>
+          <span onclick="navegar('funcionarios')">Funcionários</span>
+     </div>
 
     <!-- alunos --> 
 
@@ -47,11 +45,12 @@
             <button class="cadastrar" type="button" onclick="mostrarDados()">Cadastrar</button>
         </form>
     </div>
-
     
 </div>
 
-<div id="alunos" class="pagina paginaAtiva">
+<!---PROFESSORES-->
+
+<div id="professores" class="pagina">
     
     <div class="titulo">
         
@@ -78,7 +77,9 @@
         </form>
     </div>
 
-    <div id="alunos" class="pagina paginaAtiva">
+    <!---FUNCIONÁRIOS-->
+
+    <div id="funcionarios" class="pagina">
         
         <div class="titulo">
             
@@ -109,8 +110,25 @@
     
 </body>
 <script>
+
+ function navegar(pagina) {
+
+     let paginas = document.querySelectorAll("#dashboard, #alunos, #professores, #funcionarios");
+     for (let i = 0; i < paginas.length; i++) {
+          paginas[i].classList.remove("paginaAtiva");
+     }
+     document.getElementById(pagina).classList.add("paginaAtiva");
+     }
+
+    
+     let alunos = [];
+     let professores = [];
+     let funcionarios = [];
+
+
     function mostrarDados (){
 
+       alert("Funcionou!");
        let nome = document.getElementById("nome").value;
        let dataNasc = document.getElementById("dataNasc").value;
        let email = document.getElementById("email").value;

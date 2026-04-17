@@ -41,8 +41,8 @@ border-bottom: 2px solid black;
    margin-bottom: 2.5rem;
 }
 
-.paginaAtiva {
-   display: block;
+.pagina{
+   display: none;
    flex-direction: column;
    padding: 2rem;          
    border-radius: 2rem;
@@ -53,9 +53,10 @@ border-bottom: 2px solid black;
    gap: 1rem; 
 }
 
-/* .pagina{
-   display: none;
-} */
+.paginaAtiva {
+   display: block;
+}
+
 
 label {
    font-weight: bold;
